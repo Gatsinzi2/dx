@@ -5,13 +5,9 @@
  */
 package domain;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 
 @Entity
@@ -19,7 +15,7 @@ public class Car {
     @Id
     private String plateNo;
     private String model;
-    private String institution;
+    private String status;
     private Integer manufacturingYear;
     private Long purchasingCost;
 
@@ -39,12 +35,12 @@ public class Car {
         this.model = model;
     }
 
-    public String getInstitution() {
-        return institution;
+    public String getstatus() {
+        return status;
     }
 
-    public void setInstitution(String institution) {
-        this.institution = institution;
+    public void setstatus(String status) {
+        this.status = status;
     }
 
     public Integer getManufacturingYear() {
@@ -65,7 +61,7 @@ public class Car {
     }
     
   
-
+ /**
     @Override
     public int hashCode() {
         int hash = 5;
@@ -73,7 +69,7 @@ public class Car {
         return hash;
     }
 
-    @Override
+   @Override
     public boolean equals(Object obj) {
         if (this == obj) {
             return true;
@@ -91,7 +87,7 @@ public class Car {
         return true;
     }
 
-    
+    */
 
 
 }

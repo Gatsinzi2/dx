@@ -25,14 +25,15 @@
             User user = new UserDao().findByUsername(usn);
             if (user != null && user.getPassword().equals(password)) {
             
-                out.print("welcome home");
+                response.sendRedirect("dashbood.html");
                 
             
             
             }else{
-                 response.sendRedirect("login.html");
-                out.print("invalid username or password");
+                 String msgs="invalid username or password";
                 
+                  response.sendRedirect( "login.html"  );
+                 
                
             }
         
