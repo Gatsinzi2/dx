@@ -1,6 +1,6 @@
 <%-- 
-    Document   : addcarjsp
-    Created on : Apr 20, 2023, 8:56:14 AM
+    Document   : updatecar
+    Created on : May 2, 2023, 1:13:51 PM
     Author     : Gatsinzi
 --%>
 
@@ -11,13 +11,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>ADDING CAR</title>
+        <title>JSP Page</title>
     </head>
     <body>
-        <%
-            Car car=new Car();
-             CarDao dc=new CarDao();
-             String ptn,model,status,year,price;
+      <%   
+        Car car=new Car();
+        CarDao cd=new CarDao();
+            String ptn,model,status,year,price;
            ptn=request.getParameter("pn");
            model=request.getParameter("mo");
            status=request.getParameter("sc");
@@ -26,13 +26,11 @@
            car.setPlateNo(ptn);
            car.setModel(model);
            car.setstatus(status);
-           
            car.setManufacturingYear(Integer.parseInt(year));
            car.setPurchasingCost(Long.parseLong(price));
-          dc.create(car);
-           out.print("CAR ADDED");
-           response.sendRedirect("listofcarjsp.jsp");
-        
+          
+       cd.update(car);
+        response.sendRedirect("listofcarjsp.jsp");
         %>
     </body>
 </html>

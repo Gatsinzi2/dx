@@ -66,21 +66,15 @@
                      <td><%=car.getPurchasingCost()%></td>
                      
                      
-                     <td><a href="addcar.html"  > UPDATE</a> </td>
-                     <td>  <input type="submit" value="delete" action="<%=deleteCar(car) %>"> </td>
+                     <td><a href="Updatecarform.jsp?pn=<%=car.getPlateNo()%>"  > UPDATE</a> </td>
+                     <td>  <a href="deletecar.jsp?id=<%=car.getPlateNo() %>" >delete</a> </td>
                     </tr>
                     
                 <%  }%>  
-                                   <%! 
-                         
-             public String deleteCar(Car cr) {
-         this.car = cr;
-         cdao.delete(cr.getPlateNo());
-        this.action = "Delete";
-        return "car has deleted";
-    }       
-           %>     
+                                 
         </table>
-     
+                <a href="addcar.html"  >Add Car</a>
+                
+                <a href="dashbood.html">Go Back To Menu</a>
     </body>
 </html>

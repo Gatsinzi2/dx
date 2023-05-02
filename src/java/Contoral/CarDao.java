@@ -20,12 +20,12 @@ public class CarDao {
         ss.close();
     }
 
-    public void delete(String plateNo) {
+    public void delete(Car car) {
         
         Session ss = HibernateUtil.getSession();
         ss.beginTransaction();
         
-        Car car=(Car) ss.get(Car.class, plateNo);
+       // Car car=(Car) ss.get(Car.class, plateNo);
         ss.delete(car);
         ss.getTransaction().commit();
         ss.close();
