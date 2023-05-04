@@ -57,15 +57,13 @@
                
                <%  carList= this.cdao.findAll();
                         for(Car car:carList){  %>
-                <tr>       
+                        <tr onmouseover="style.backgroundColor='grey' " onmouseout="style.backgroundColor='white'">       
                      
                     <td><%=car.getPlateNo() %></td>
                     <td> <%=car.getModel() %></td>
                     <td><%=car.getstatus()%></td>
                      <td><%=car.getManufacturingYear()%></td>
                      <td><%=car.getPurchasingCost()%></td>
-                     
-                     
                      <td><a href="Updatecarform.jsp?pn=<%=car.getPlateNo()%>"  > UPDATE</a> </td>
                      <td>  <a href="deletecar.jsp?id=<%=car.getPlateNo() %>" >delete</a> </td>
                     </tr>
@@ -73,8 +71,9 @@
                 <%  }%>  
                                  
         </table>
-                <a href="addcar.html"  >Add Car</a>
+                <br><br>
+                <a href="carformadds.html"  >Add Car</a>
                 
-                <a href="dashbood.html">Go Back To Menu</a>
+                <a href="dashdisplay.html">Go Back To Menu</a>
     </body>
 </html>

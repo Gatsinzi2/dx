@@ -31,11 +31,12 @@
           usermo.setPassword(paw);
         usermo.setFirstName(fin);
         usermo.setLastName(lan);
-        usermo.setGender(Gender.MALE);
+        usermo.setGender(ge) ;
         usermo.setPhone(ph);
        doauser =new UserDao();
        doauser.create(usermo);
-       out.print("You are successfully registered");  
+       out.print("You are successfully registered"); 
+       response.sendRedirect("login.html");
        
       
        

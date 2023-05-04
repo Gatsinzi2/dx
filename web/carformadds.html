@@ -12,24 +12,12 @@ and open the template in the editor.
         <link rel="stylesheet" href="registation.css" > 
     </head>
     <body>
-        <script>
-    const nameField = document.querySelector("input");
 
-nameField.addEventListener("input", () => {
-  nameField.setCustomValidity("");
-  nameField.checkValidity();
-  console.log(nameField.checkValidity());
-});
-
-nameField.addEventListener("invalid", () => {
-  nameField.setCustomValidity("Please fill in your First Name.");
-});
-</script>
   <div class="wrapper">
 <div class="title">
      ADDING CAR
 </div>
-    <form action="addcarjsp.jsp" name="addcar">   
+    <form action="addcarjsp.jsp" >   
 <div class="form">
     
 <div class="input-field">
@@ -55,11 +43,14 @@ nameField.addEventListener("invalid", () => {
 </div>
 <div class="input-field">
 <input type="submit"  value="ADD CAR" class="btn">
-<a href="dashbood.html" class="btn"> GO HOME </a>
+<a href="dashdisplay.html" class="btn"> Go Back</a>
+    
 </div>
          
 </div>
-</form>       
+</form>
+      
+
 </div>
     </body>
     

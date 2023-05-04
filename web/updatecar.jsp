@@ -11,11 +11,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>update car</title>
     </head>
     <body>
       <%   
-        Car car=new Car();
+        Car ca=new Car();
         CarDao cd=new CarDao();
             String ptn,model,status,year,price;
            ptn=request.getParameter("pn");
@@ -23,13 +23,12 @@
            status=request.getParameter("sc");
            year=request.getParameter("my");
            price=request.getParameter("pc");
-           car.setPlateNo(ptn);
-           car.setModel(model);
-           car.setstatus(status);
-           car.setManufacturingYear(Integer.parseInt(year));
-           car.setPurchasingCost(Long.parseLong(price));
-          
-       cd.update(car);
+           ca.setPlateNo(ptn);
+           ca.setModel(model);
+           ca.setstatus(status);
+           ca.setManufacturingYear(Integer.parseInt(year));
+           ca.setPurchasingCost(Long.parseLong(price));
+                cd.update(ca);
         response.sendRedirect("listofcarjsp.jsp");
         %>
     </body>

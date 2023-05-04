@@ -20,11 +20,11 @@ public class User {
     private String password;
     private String firstName;
     private String lastName;
-    @Enumerated(EnumType.STRING)
-    private Gender gender;
+   // @Enumerated(EnumType.STRING)
+    private String gender;
     private String phone;
 
-//    public User(String username, String password, String firstName, String lastName, Gender gender, String phone) {
+//    public User(String username, String password, String firstName, String lastName, String gender, String phone) {
 //        this.username = username;
 //        this.password = password;
 //        this.firstName = firstName;
@@ -69,19 +69,15 @@ public class User {
         this.lastName = lastName;
     }
 
-    public Gender getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(Gender gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
-    @Override
-    public String toString() {
-        String title = (gender == Gender.MALE)? "Mr." : "Ms.";
-        return title +" "+lastName +" "+firstName;
-    }
+   
 
     public String getPhone() {
         return phone;

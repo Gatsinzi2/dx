@@ -25,7 +25,7 @@
             User user = new UserDao().findByUsername(usn);
             if (user != null && user.getPassword().equals(password)) {
             
-                response.sendRedirect("dashbood.html");
+                response.sendRedirect("dashframe.html");
                 
             
             

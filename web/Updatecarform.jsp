@@ -29,11 +29,11 @@
     
 <div class="input-field">
 <label > Plate No </label>
-<input type="reset" class="inputs" name="pn" value="<%=ca.getPlateNo()%>"  >
+<input type="text" class="inputs" name="pn" value="<%=ca.getPlateNo()%>"  >
 </div>
 <div class="input-field">
 <label > Model</label>
-<input type="text" class="inputs" name="mo" required value="<%=ca.getModel()%>">
+<input type="text" class="inputs" name="mo"  value="<%=ca.getModel()%>">
 </div>
 <div class="input-field">
 <label > Status of Car </label>
